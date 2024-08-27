@@ -1,0 +1,238 @@
+/* Basic reset for sections */
+.slide-in-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Visible class to apply the sliding effect */
+.slide-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark background for the page */
+body {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+    
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the active section to ensure it's visible */
+.section-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(90deg, rgba(88, 85, 85, 0.9) 0%, rgba(0,0,0,0.7) 100%);
+  color: #ff9f1c;
+  position: static; /* Change to static to remove floating */
+  width: 100%;
+  padding: 15px 0; /* Adjust padding for better appearance */
+  transition: background 0.3s ease;
+}
+
+/* Navbar brand and links */
+.navbar-brand, .nav-link {
+  color: #ff9f1c;
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase text for a modern look */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Larger brand name */
+}
+
+.navbar-brand:hover, .nav-link:hover {
+  color: #ff6f00;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glow effect */
+}
+
+/* Navbar toggler button */
+.navbar-toggler {
+  border-color: #ff9f1c;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path stroke="%23ff9f1c" stroke-linecap="round" stroke-width="2" d="M5 7h20M5 15h20M5 23h20"/></svg>');
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  background-color: #222;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-item {
+  color: #ff9f1c;
+}
+
+.dropdown-item:hover {
+  background-color: #ff6f00;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+}
+
+#profile {
+  padding: 100px 0;
+  text-align: center;
+}
+
+
+
+#profile h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+#about, #experience, #projects, #education, #contact {
+  padding: 60px 0;
+}
+
+#about h2, #experience h2, #projects h2, #education h2, #contact h2 {
+  color: #ff9f1c;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #222;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card-img-top {
+  transition: opacity 0.3s ease;
+}
+
+.card-img-top:hover {
+  opacity: 0.8;
+}
+
+.card-title {
+  color: #ff9f1c;
+}
+
+.btn-warning {
+  background-color: #ff9f1c;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #ff6f00;
+}
+
+.btn-outline-warning {
+  border-color: #ff9f1c;
+  color: #ff9f1c;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-warning:hover {
+  color: #ff6f00;
+  border-color: #ff6f00;
+}
+
+/* Bootstrap Timeline */
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  border-left: 2px solid #ff9f1c;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 50px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff9f1c;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.timeline-item .timeline-content {
+  position: relative;
+  padding: 10px;
+  background: #222;
+  border-radius: 8px;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: auto;
+  text-align: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: auto;
+  text-align: left;
+}
+
+.timeline-item .timeline-content h3 {
+  color: #ff9f1c;
+}
+
+.timeline-item .timeline-content p {
+  color: #fff;
+}
+
+.contact-icon {
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+}
+
+footer a {
+  color: #ff9f1c;
+}
+
+footer a:hover {
+  color: #ff6f00;
+}
+  
